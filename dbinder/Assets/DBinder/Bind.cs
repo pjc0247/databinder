@@ -3,31 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Representable))]
 public class Bind : Observer
 {
     public string property;
 
-    private BindRoot root;
-    private Representable representable;
+    protected BindRoot root;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         root = GetComponentInParent<BindRoot>();
-        representable = GetComponent<Representable>();
-
         root.Subscribe(this);
     }
 
-    public override void Invalidate()
+    protected object GetValue()
     {
-        Debug.Log("Invalidate " + property);
-
         if (property == "$self")
-            representable.SetText(root.context.ToString());
+            return root.context;
         else
-        {
-            representable.SetText(root.Get(property).ToString());
-        }
+            return root.Get(property);
     }
 }
