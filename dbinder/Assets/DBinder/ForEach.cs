@@ -14,8 +14,10 @@ public class ForEach : BindRoot
 
     private List<GameObject> clones = new List<GameObject>();
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         root = transform.parent.GetComponentInParent<BindRoot>();
         root.Subscribe(this);
     }
