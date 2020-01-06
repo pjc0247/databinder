@@ -1,0 +1,1 @@
+two-way databinding just like web frameworks. proof-of-concept. 
