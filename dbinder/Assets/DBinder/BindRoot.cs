@@ -24,9 +24,15 @@ public class BindRoot : Observer
         foreach (var obs in clone)
             obs.Invalidate();
     }
+
     public object Get(string path)
     {
         return PScript.Eval(context, path);
+    }
+    public void Set(object obj)
+    {
+        context = obj;
+        Invalidate();
     }
 
     public void Subscribe(Observer obs)
