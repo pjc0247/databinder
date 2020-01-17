@@ -3,30 +3,22 @@ two-way databinding just like web frameworks. proof-of-concept.
 Components
 ----
 
-__Show__
+__Show__<br>
 ![show](img/show.jpg)
 
-<br>
-
-__If__
+__If__<br>
 ![if](img/if.jpg)
 
-<br>
-
-__InBind__
+__InBind__<br>
 ![if](img/inbind.jpg)
 
-<br>
-
-__OutBind__
+__OutBind__<br>
 ![if](img/outbind.jpg)
 
-<br>
 
-__ForEach__
+__ForEach__<br>
 ![if](img/foreach.jpg)
 
-<br>
 
-__OnClick__
+__OnClick__<br>
 ![if](img/onclick.jpg)
